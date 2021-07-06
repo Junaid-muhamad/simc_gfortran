@@ -7,7 +7,7 @@ Date   : May 17, 2021
 email  : cyero@jlab.org
 '''
 
-import numpy as np    
+#import numpy as np    
 import os             # contains the system function that can execute shell commands 
 
 # input file name containng list of kinematic files for simulation
@@ -34,9 +34,19 @@ for ikin in input_list:
 
         #define command to convert ASCII file to ROOTfile
         if(ikin.find("SHMS") != -1):
-           run_fmake_cmd = "root -b -q -l '/u/group/c-kaonlt/USERS/heinricn/simc_gfortran/SIMC_Summary.C(\"%s\", \"S\")' " % (ikin) 
+           run_fmake_cmd = "root -b -q -l '/u/group/c-kaonlt/USERS/junaid/hallc_replay_lt/simc_gfortran/SIMC_Summary.C(\"%s\", \"S\")' " % (ikin) 
         else:
-           run_fmake_cmd = "echo 'done'" # "root -b -q -l '/u/group/c-kaonlt/USERS/heinricn/simc_gfortran/SIMC_Summary.C(\"%s\", \"H\")' " % (ikin)
+           run_fmake_cmd = "echo 'done'"  #"root -b -q -l '/u/group/c-kaonlt/USERS/junaid/hallc_replay_lt/simc_gfortran/SIMC_Summary.C(\"%s\", \"H\")' " % (ikin)
+
+#        if(ikin.find("HMS") != -1):
+#           run_fmake_cmd = "root -b -q -l '/u/group/c-kaonlt/USERS/junaid/hallc_replay_lt/simc_gfortran/SIMC_Summary.C(\"%s\", \"S\")' " % (ikin)
+#        else:
+#           run_fmake_cmd = "echo 'done'"  #"root -b -q -l '/u/group/c-kaonlt/USERS/junaid/hallc_replay_lt/simc_gfortran/SIMC_Summary.C(\"%s\", \"H\")' " % (ikin)
+
+#        if(ikin.find("SHMS") != -1):
+#           run_fmake_cmd = "root -b -q -l '/u/group/c-kaonlt/USERS/junaid/hallc_replay_lt/simc_gfortran/SIMC_Summary.C(\"%s\", \"S\")' " % (ikin)
+#        else:
+#           run_fmake_cmd = "echo 'done'"  #"root -b -q -l '/u/group/c-kaonlt/USERS/junaid/hallc_replay_lt/simc_gfortran/SIMC_Summary.C(\"%s\", \"H\")' " % (ikin)
         
         print(run_fmake_cmd)
 

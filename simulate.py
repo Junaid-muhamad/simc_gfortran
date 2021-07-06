@@ -7,7 +7,7 @@ Date   : May 17, 2021
 email  : cyero@jlab.org
 '''
 
-import numpy as np    
+#import numpy as np    
 import os             # contains the system function that can execute shell commands 
 
 # input file name containng list of kinematic files for simulation

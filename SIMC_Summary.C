@@ -264,23 +264,3 @@ void SIMC_Summary (TString Filename, TString SPEC_FLAG)
     return;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -108,4 +108,3 @@ begin parm simulate
   use_offshell_rad = 1  ;  (ONE = TRUE)
   Egamma_gen_max = 0.   ;  Set >0 to hardwire the Egamma limits.
 end parm simulate
-
